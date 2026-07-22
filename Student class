@@ -1,0 +1,56 @@
+package OOP_Journey;
+
+public class Student {
+	
+			String fullName, section, favSub, favProf;
+			double firstSemGWA, secondSemGWA;
+			char remarksVerification;
+			
+			Student(String fullName, String section, String favSub, String favProf,
+					double firstSemGWA, double secondSemGWA, char remarksVerification){
+				
+				this.fullName = fullName;
+				this.section = section;
+				this.favSub = favSub;
+				this.favProf = favProf;
+				this.firstSemGWA = firstSemGWA;
+				this.secondSemGWA = secondSemGWA;
+				this.remarksVerification = remarksVerification;
+				
+			}
+			
+			void Introduction() {
+				System.out.println("Hello, I'am " + fullName);
+				System.out.println("My section is " + section);
+			}
+			
+			void Favorites () {
+				System.out.println("Favorite subject: " + favSub);
+				System.out.println("Favorite prof: " + favProf);
+				}
+			void GWA() {
+				double CGWA = (firstSemGWA + secondSemGWA) /2;
+			
+				System.out.println("First sem GWA " + firstSemGWA);
+				System.out.println("Secon sem GWA: " + secondSemGWA);
+				
+				System.out.println("My cumulative GWA is " +CGWA);
+				
+				if(CGWA <= 1.50 && remarksVerification == 'N') {
+					System.out.println("Remarks: President's Honor List");
+				}
+				else if(CGWA <= 1.50 && remarksVerification == 'Y'){	
+					System.out.println("Remarks: Dean's Lister");
+				}
+				else if(CGWA <= 3.00) {
+					System.out.println("Passed");
+				}
+				else {
+					System.out.println("Failed	");
+				}
+			}
+}
+		
+	
+	
+
