@@ -1,0 +1,44 @@
+package OOP_Journey;
+import java.util.Scanner;
+public class ObjectOrientedProgramming {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+
+		System.out.print("Full name: ");
+		String fullName = input.nextLine();
+		
+		System.out.print("Section: ");
+		String section = input.nextLine();
+		
+		System.out.print("Favorite Subject: ");
+		String subject = input.nextLine();
+		
+		System.out.print("Favorite Prof: ");
+		String prof = input.nextLine();
+		
+		System.out.print("Do you have an overall grade of 2.00? (Y/N): ");
+		char remarksVerification = input.next().charAt(0);
+		
+		System.out.print("First sem GWA: ");
+		double firstSemGWA = input.nextDouble();
+		
+		System.out.print("Second sem GWA: ");
+		double secondSemGWA = input.nextDouble();
+		
+		
+		
+		Student student1 = new Student(fullName, section, subject, prof, firstSemGWA, secondSemGWA, remarksVerification);
+		
+		System.out.println();
+		student1.Introduction();
+		System.out.println();
+		
+		student1.Favorites();
+		System.out.println();
+		
+		student1.GWA();
+		
+		input.close();			
+	}
+	
+}
